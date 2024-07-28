@@ -1,4 +1,4 @@
-# 3D Printer SSD power switch
+# 3D Printer SSR power switch
 
 This project is a simple power switch for a 3D printer that uses a Raspberry Pi and Mainsail/Fluidd. 
 The power switch is controlled by the Raspberry Pi using a GPIO pin.
@@ -6,11 +6,13 @@ The power switch is controlled by the Raspberry Pi using a GPIO pin.
 You can leave your raspberry pi running 24/7 and use the SSR to turn on and off the printer.
 The printer will be powered off on any error that halts a print or after an idle timeout.
 
-## !Safety warning!
-Keep in mind you're working with AC mains power. 
-If you're not comfortable with this, please don't attempt this project.
+## <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/OOjs_UI_icon_alert-yellow.svg/1920px-OOjs_UI_icon_alert-yellow.svg.png" alt="Caution" width="24" height="24"> Safety Warning!
 
-Make sure to unplug your power when ever you're working in the control box of your printer.
+<div style="border: 2px solid yellow; padding: 10px; background-color: #fff3cd; color: #333">
+  <strong>Keep in mind you're working with AC mains power. If you're not comfortable with this, please don't attempt this project.</strong>
+  <br>
+  Make sure to unplug your power whenever you're working in the control box of your printer. Always handle AC mains power with extreme caution to avoid electric shock.
+</div>
 
 ## Hardware
 You need an SSR (Solid State Relay) to control the power to the printer. The SSR is connected to the Raspberry Pi using a GPIO pin.
@@ -20,7 +22,10 @@ In the configuration below, we're using GPIO Pin 26 on the Raspberry to control 
 
 Start by hooking up the SSR input side to the Raspberry Pi GPIO pin 26 and GND on your 5V power supply. (or GND on the pi)
 
-![Raspberry Pi GPIO pinout](images/Pin-Layout-on-Raspberry-Pi-01.png)
+<div style="height:50px; overflow:hidden;">
+  <img src="https://raw.githubusercontent.com/mfeldheim/printer_on_off/main/images/Pin-Layout-on-Raspberry-Pi-01.png" alt="Image 0: Raspberry Pi GPIO pinout">
+</div>
+<a href="https://github.com/mfeldheim/printer_on_off/blob/main/images/Pin-Layout-on-Raspberry-Pi-01.png">Click to view full image</a>
 
 ## Software prerequisites
 If you need help installing Mainsail on your Raspberry Pi, please refer to the [Mainsail documentation](https://docs.mainsail.xyz/setup/installation.html).
